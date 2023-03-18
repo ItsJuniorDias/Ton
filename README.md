@@ -1,4 +1,4 @@
-# Ton 🪀
+# Ton 🧩
 
 Code challenger build using React Native
 
