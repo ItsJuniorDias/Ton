@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { theme, shadowStyles } from '../../global';
+import { scale } from '../../utils';
 
 import {
   Container,
@@ -14,21 +14,13 @@ import {
 
 export const Header = () => {
   return (
-    <Container
-      style={{
-        ...shadowStyles,
-      }}
-    >
+    <Container>
       <FakeView />
 
       <Title>Home</Title>
 
       <View>
-        <Icon
-          name="shopping-cart"
-          size={RFValue(28)}
-          color={theme.colors.primary}
-        />
+        <Icon name="shopping-cart" size={28} color={theme.colors.primary} />
 
         <Notification>
           <NotificationValue>2</NotificationValue>

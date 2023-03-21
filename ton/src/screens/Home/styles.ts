@@ -1,13 +1,15 @@
 import styled from 'styled-components/native';
-import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import { scale } from '../../utils';
 
-export const Container = styled.View`
+export const Content = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.colors.shape};
+  padding: 0px 24px;
+  padding-bottom: 32px;
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: ${RFValue(18)}px;
+  font-size: ${scale(18)};
   font-family: ${({ theme }) => theme.fonts.bold};
 `;

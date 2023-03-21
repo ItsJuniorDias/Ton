@@ -1,42 +1,43 @@
 import styled from 'styled-components/native';
-import { RFValue } from 'react-native-responsive-fontsize';
+import { scale } from '../../utils';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   width: 100%;
-  height: ${RFValue(64)}px;
-  padding: 0px ${RFValue(24)}px;
+  height: ${scale(64)};
+  padding: 0px ${scale(24)};
   background-color: ${({ theme }) => theme.colors.shape};
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  margin-top: ${getStatusBarHeight()}px;
 `;
 
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.medium};
-  font-size: ${RFValue(18)}px;
+  font-size: ${scale(18)};
   color: ${({ theme }) => theme.colors.title};
 `;
 
 export const FakeView = styled.View`
-  width: ${RFValue(26)}px;
-  height: ${RFValue(26)}px;
+  width: ${scale(26)};
+  height: ${scale(26)};
 `;
 
 export const Notification = styled.View`
-  width: ${RFValue(18)}px;
-  height: ${RFValue(18)}px;
+  width: ${scale(18)};
+  height: ${scale(18)};
   background-color: ${({ theme }) => theme.colors.notification};
-  border-radius: ${RFValue(10)}px;
+  border-radius: ${scale(10)};
   align-items: center;
   justify-content: center;
-
   position: absolute;
-  margin-left: 16px;
-  margin-top: -8px;
+  margin-left: ${scale(16)};
+  margin-top: ${scale(-8)};
 `;
 
 export const NotificationValue = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: ${RFValue(14)}px;
+  font-size: ${scale(14)};
   color: ${({ theme }) => theme.colors.title};
 `;
