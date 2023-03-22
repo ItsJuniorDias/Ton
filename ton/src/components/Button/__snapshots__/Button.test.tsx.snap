@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Behavior Button render snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "backgroundColor": "#01ea34",
+        "borderRadius": 31,
+        "height": 51,
+        "justifyContent": "center",
+        "marginTop": 31,
+        "width": "100%",
+      },
+      {
+        "opacity": 1,
+      },
+    ]
+  }
+  testID="button_testID"
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#20252b",
+          "fontFamily": "Roboto-Bold",
+          "fontSize": 27,
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    Pedir agora
+  </Text>
+</View>
+`;

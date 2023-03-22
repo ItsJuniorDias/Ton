@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Behavior ProductCard render snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#ffffff",
+        "borderRadius": 31,
+        "height": 447,
+        "marginRight": 47,
+        "marginTop": 47,
+        "paddingBottom": 31,
+        "paddingLeft": 31,
+        "paddingRight": 31,
+        "paddingTop": 31,
+        "width": "46%",
+      },
+    ]
+  }
+  testID="containerCard_testID"
+>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "uri": "https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_auto/site-ton/t1-1",
+      }
+    }
+    style={
+      [
+        {
+          "height": 147,
+        },
+      ]
+    }
+  />
+  <Text
+    numberOfLines={1}
+    style={
+      [
+        {
+          "color": "#20252b",
+          "fontFamily": "Roboto-Regular",
+          "fontSize": 31,
+          "marginTop": 31,
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    T1 Brother
+  </Text>
+  <View>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "Roboto-Bold",
+            "fontSize": 24,
+            "lineHeight": 47,
+          },
+        ]
+      }
+    >
+      R$ 118,80
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "Roboto-Bold",
+            "fontSize": 22,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+              "fontFamily": "Roboto-Bold",
+              "fontSize": 22,
+            },
+          ]
+        }
+      >
+        12x 
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#01ad0b",
+              "fontFamily": "Roboto-Bold",
+              "fontSize": 35,
+            },
+          ]
+        }
+      >
+        R$ 9,90
+      </Text>
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "backgroundColor": "#01ea34",
+          "borderRadius": 31,
+          "height": 51,
+          "justifyContent": "center",
+          "marginTop": 31,
+          "width": "100%",
+        },
+        {
+          "opacity": 1,
+        },
+      ]
+    }
+    testID="button_testID"
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#20252b",
+            "fontFamily": "Roboto-Bold",
+            "fontSize": 27,
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Pedir agora
+    </Text>
+  </View>
+</View>
+`;

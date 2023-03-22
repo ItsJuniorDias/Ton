@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { View, Text } from 'react-native';
 import { Button } from '../../components';
 import { formatCurrency } from '../../utils';
@@ -20,8 +20,12 @@ type ProductCard = {
 };
 
 export const ProductCard = ({ id, title, thumbnail, price }: ProductCard) => {
+  const testIDs = useRef({
+    container: 'containerCard_testID',
+  }).current;
+
   return (
-    <Container key={id}>
+    <Container testID={testIDs.container} key={id}>
       <Thumbnail source={{ uri: thumbnail }} resizeMode="contain" />
 
       <Title numberOfLines={1}>{title}</Title>

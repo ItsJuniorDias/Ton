@@ -39,7 +39,7 @@ export const Home = () => {
 
   return (
     <>
-      <Header />
+      <Header title="Header" amountCart={2} />
 
       <Content>
         <FlatList

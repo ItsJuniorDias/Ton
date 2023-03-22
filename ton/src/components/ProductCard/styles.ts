@@ -3,7 +3,7 @@ import { scale } from '../../utils';
 
 export const Container = styled.View`
   width: 46%;
-  height: ${scale(224)};
+  height: ${scale(228)};
   background-color: ${({ theme }) => theme.colors.shape};
   margin-top: ${scale(24)};
   margin-right: ${scale(24)};
