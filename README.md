@@ -47,6 +47,7 @@ $ cd ton
 $ cd ios 
 $ pod install  
 $ cd ../
+
 $ yarn ios
 or 
 $ yarn android  
