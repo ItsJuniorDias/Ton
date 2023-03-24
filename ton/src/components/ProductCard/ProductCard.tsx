@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Button } from '../../components';
-import { useAppDispatch } from '../../hooks';
+import { useAppDispatch, useAppSelector } from '../../hooks';
 import { formatCurrency } from '../../utils';
 import {
   addProductToCart,
@@ -22,41 +22,46 @@ type ProductCard = {
   title: string;
   thumbnail: string;
   price: number;
+  intoToCart: boolean;
 };
 
-export const ProductCard = ({ id, title, thumbnail, price }: ProductCard) => {
-  const [isDelete, setIsDelete] = useState(false);
-
+export const ProductCard = ({
+  id,
+  title,
+  thumbnail,
+  price,
+  intoToCart,
+}: ProductCard) => {
   const testIDs = useRef({
     container: 'containerCard_testID',
     buttonAdd: 'buttonAdd_testID',
     buttonDelete: 'buttonDelete_testID',
   }).current;
 
+  const cart = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
 
   const handleAddToCart = () => {
-    setIsDelete(true);
-
     dispatch(
       addProductToCart({
         id,
         title,
         thumbnail,
         price,
+        intoToCart: true,
       })
     );
   };
 
   const handleDelete = () => {
-    setIsDelete(false);
-
     dispatch(
       deleteProductFromCart({
         id,
       })
     );
   };
+
+  const itemIntoToCart = cart.data.find((item) => item.id === id);
 
   return (
     <Container testID={testIDs.container} key={id}>
@@ -73,7 +78,7 @@ export const ProductCard = ({ id, title, thumbnail, price }: ProductCard) => {
         </Installments>
       </View>
 
-      {isDelete && (
+      {itemIntoToCart?.intoToCart && (
         <Button
           testID={testIDs.buttonDelete}
           isDelete
@@ -82,7 +87,7 @@ export const ProductCard = ({ id, title, thumbnail, price }: ProductCard) => {
         />
       )}
 
-      {!isDelete && (
+      {!itemIntoToCart?.intoToCart && (
         <Button
           testID={testIDs.buttonAdd}
           onPress={handleAddToCart}

@@ -16,6 +16,7 @@ type ProductProps = {
   title: string;
   thumbnail: string;
   price: number;
+  isIntoToCart: boolean;
 };
 
 type ProductState = {
@@ -61,10 +62,15 @@ export const useFetchProducts = () => {
       .then((response) => {
         const { data } = response;
 
+        const formatData = data.map((item) => ({
+          ...item,
+          intoToCart: false,
+        }));
+
         dispatchDataProducts({
           type: 'FETCH',
           payload: {
-            data,
+            data: formatData,
           },
         });
 

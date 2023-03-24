@@ -1,10 +1,8 @@
 import React from 'react';
 import { FlatList, ActivityIndicator } from 'react-native';
-
 import { Header, ProductCard } from '../../components';
 import { useAppSelector, useFetchProducts } from '../../hooks';
 import { theme } from '../../global';
-
 import { Content, LoadingContent } from './styles';
 
 export const Home = () => {

@@ -5,6 +5,7 @@ type ProductProps = {
   title: string;
   thumbnail: string;
   price: number;
+  intoToCart: boolean;
 };
 
 type CartState = {

@@ -4,13 +4,13 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   width: 100%;
-  height: ${scale(64)};
+  height: ${scale(96)};
   padding: 0px ${scale(24)};
   background-color: ${({ theme }) => theme.colors.shape};
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: ${getStatusBarHeight()}px;
+  padding-top: ${getStatusBarHeight()}px;
 `;
 
 export const Title = styled.Text`
