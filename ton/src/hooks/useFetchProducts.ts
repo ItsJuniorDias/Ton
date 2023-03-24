@@ -82,5 +82,6 @@ export const useFetchProducts = () => {
 
   return {
     dataProducts,
+    dispatchDataProducts,
   };
 };

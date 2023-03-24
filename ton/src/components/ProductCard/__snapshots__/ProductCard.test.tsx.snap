@@ -150,7 +150,7 @@ exports[`Behavior ProductCard render snapshot 1`] = `
         },
       ]
     }
-    testID="button_testID"
+    testID="buttonAdd_testID"
   >
     <Text
       style={

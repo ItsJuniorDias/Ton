@@ -1,22 +1,22 @@
-import React, { useRef } from 'react';
-import { View } from 'react-native';
-
+import React from 'react';
 import { Pressable, Title } from './styles';
 
 type ButtonProps = {
+  testID?: string;
   title: string;
   onPress: () => void;
   isDelete?: boolean;
 };
 
-export const Button = ({ title, onPress, isDelete }: ButtonProps) => {
-  const testIDs = useRef({
-    button: 'button_testID',
-  }).current;
-
+export const Button = ({
+  testID = 'button_testID',
+  title,
+  onPress,
+  isDelete,
+}: ButtonProps) => {
   return (
     <Pressable
-      testID={testIDs.button}
+      testID={testID}
       onPress={onPress}
       isDelete={isDelete}
       style={({ pressed }) => [

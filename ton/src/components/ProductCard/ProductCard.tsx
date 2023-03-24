@@ -29,6 +29,8 @@ export const ProductCard = ({ id, title, thumbnail, price }: ProductCard) => {
 
   const testIDs = useRef({
     container: 'containerCard_testID',
+    buttonAdd: 'buttonAdd_testID',
+    buttonDelete: 'buttonDelete_testID',
   }).current;
 
   const dispatch = useAppDispatch();
@@ -71,9 +73,22 @@ export const ProductCard = ({ id, title, thumbnail, price }: ProductCard) => {
         </Installments>
       </View>
 
-      {isDelete && <Button isDelete onPress={handleDelete} title="Remover" />}
+      {isDelete && (
+        <Button
+          testID={testIDs.buttonDelete}
+          isDelete
+          onPress={handleDelete}
+          title="Remover"
+        />
+      )}
 
-      {!isDelete && <Button onPress={handleAddToCart} title="Pedir agora" />}
+      {!isDelete && (
+        <Button
+          testID={testIDs.buttonAdd}
+          onPress={handleAddToCart}
+          title="Pedir agora"
+        />
+      )}
     </Container>
   );
 };

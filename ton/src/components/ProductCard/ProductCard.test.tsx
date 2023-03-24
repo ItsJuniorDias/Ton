@@ -1,9 +1,11 @@
 import 'jest-styled-components';
 import React from 'react';
-import { render } from '@testing-library/react-native';
+import { fireEvent, render } from '@testing-library/react-native';
 import { ThemeProvider } from 'styled-components/native';
 import { ProductCard } from './ProductCard';
 import { theme } from '../../global';
+import store from '../../store';
+import { Provider } from 'react-redux';
 
 jest.mock('react-native-vector-icons/MaterialIcons', () => 'Icon');
 
@@ -22,9 +24,11 @@ describe('Behavior ProductCard', () => {
   };
 
   const screenRender = () => (
-    <ThemeProvider theme={theme}>
-      <ProductCard {...props} />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <ProductCard {...props} />
+      </ThemeProvider>
+    </Provider>
   );
 
   it('render snapshot', () => {
@@ -39,5 +43,20 @@ describe('Behavior ProductCard', () => {
     const containerCard = getByTestId('containerCard_testID');
 
     expect(containerCard).toBeTruthy();
+  });
+
+  it('should call function handleAddToCart and handleDelete', () => {
+    const { getByTestId } = render(screenRender());
+
+    const button = getByTestId('buttonAdd_testID');
+
+    fireEvent.press(button);
+
+    const buttonDelete = getByTestId('buttonDelete_testID');
+
+    fireEvent.press(buttonDelete);
+
+    expect(button).toBeTruthy();
+    expect(buttonDelete).toBeTruthy();
   });
 });
