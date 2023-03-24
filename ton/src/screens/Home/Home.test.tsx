@@ -4,6 +4,8 @@ import { render } from '@testing-library/react-native';
 import { ThemeProvider } from 'styled-components/native';
 import { Home } from './Home';
 import { theme } from '../../global';
+import { Provider } from 'react-redux';
+import store from '../../store';
 
 jest.mock('react-native-vector-icons/MaterialIcons', () => 'Icon');
 
@@ -14,9 +16,11 @@ jest.mock('react-native-iphone-x-helper', () => ({
 
 describe('Behavior Home', () => {
   const screenRender = () => (
-    <ThemeProvider theme={theme}>
-      <Home />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <Home />
+      </ThemeProvider>
+    </Provider>
   );
 
   it('render snapshot', () => {
