@@ -105,3 +105,109 @@ exports[`Behavior Home render snapshot 1`] = `
   </View>,
 ]
 `;
+
+exports[`Behavior Home render snapshot 2`] = `
+[
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "flexDirection": "row",
+          "height": 126,
+          "justifyContent": "space-between",
+          "marginTop": "px",
+          "paddingBottom": 0,
+          "paddingLeft": 47,
+          "paddingRight": 47,
+          "paddingTop": 0,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "height": 51,
+            "width": 51,
+          },
+        ]
+      }
+    />
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 35,
+          },
+        ]
+      }
+    >
+      Home
+    </Text>
+    <View>
+      <Icon
+        color="#01ad0b"
+        name="shopping-cart"
+        size={28}
+      />
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#ff7b00",
+              "borderRadius": 20,
+              "height": 35,
+              "justifyContent": "center",
+              "marginLeft": 31,
+              "marginTop": -16,
+              "position": "absolute",
+              "width": 35,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+                "fontFamily": "Roboto-Regular",
+                "fontSize": 27,
+              },
+            ]
+          }
+          testID="amountCart_testID"
+        >
+          0
+        </Text>
+      </View>
+    </View>
+  </View>,
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "#eff4f8",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "center",
+        },
+      ]
+    }
+  >
+    <ActivityIndicator
+      color="#01ea34"
+      size="large"
+    />
+  </View>,
+]
+`;
