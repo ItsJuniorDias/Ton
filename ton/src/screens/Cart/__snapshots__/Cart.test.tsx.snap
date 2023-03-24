@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Behavior Home render snapshot 1`] = `
+exports[`Behavior Cart render snapshot 1`] = `
 [
   <View
     style={
@@ -21,15 +21,49 @@ exports[`Behavior Home render snapshot 1`] = `
     }
   >
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         [
           {
-            "height": 51,
-            "width": 51,
+            "opacity": 1,
           },
         ]
       }
-    />
+    >
+      <Icon
+        color="#20252b"
+        name="arrow-back-ios"
+        size={22}
+      />
+    </View>
     <Text
       style={
         [
@@ -41,7 +75,7 @@ exports[`Behavior Home render snapshot 1`] = `
         ]
       }
     >
-      Home
+      Cart
     </Text>
     <View
       accessibilityState={
@@ -124,162 +158,38 @@ exports[`Behavior Home render snapshot 1`] = `
     style={
       [
         {
-          "alignItems": "center",
           "backgroundColor": "#eff4f8",
           "flexBasis": 0,
           "flexGrow": 1,
           "flexShrink": 1,
-          "justifyContent": "center",
+          "paddingBottom": 32,
+          "paddingLeft": 24,
+          "paddingRight": 24,
+          "paddingTop": 0,
         },
       ]
     }
   >
-    <ActivityIndicator
-      color="#01ea34"
-      size="large"
-    />
-  </View>,
-]
-`;
-
-exports[`Behavior Home render snapshot 2`] = `
-[
-  <View
-    style={
-      [
-        {
-          "alignItems": "center",
-          "backgroundColor": "#ffffff",
-          "flexDirection": "row",
-          "height": 188,
-          "justifyContent": "space-between",
-          "paddingBottom": 0,
-          "paddingLeft": 47,
-          "paddingRight": 47,
-          "paddingTop": "px",
-          "width": "100%",
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        [
-          {
-            "height": 51,
-            "width": 51,
-          },
-        ]
-      }
-    />
-    <Text
-      style={
-        [
-          {
-            "color": "#000000",
-            "fontFamily": "Roboto-Medium",
-            "fontSize": 35,
-          },
-        ]
-      }
+    <RCTScrollView
+      data={[]}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={[]}
+      viewabilityConfigCallbackPairs={[]}
     >
-      Home
-    </Text>
-    <View
-      accessibilityState={
-        {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": undefined,
-          "expanded": undefined,
-          "selected": undefined,
-        }
-      }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
-      }
-      accessible={true}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        [
-          {
-            "opacity": 1,
-          },
-        ]
-      }
-    >
-      <Icon
-        color="#01ad0b"
-        name="shopping-cart"
-        size={28}
-      />
-      <View
-        style={
-          [
-            {
-              "alignItems": "center",
-              "backgroundColor": "#ff7b00",
-              "borderRadius": 20,
-              "height": 35,
-              "justifyContent": "center",
-              "marginLeft": 31,
-              "marginTop": -16,
-              "position": "absolute",
-              "width": 35,
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            [
-              {
-                "color": "#000000",
-                "fontFamily": "Roboto-Regular",
-                "fontSize": 27,
-              },
-            ]
-          }
-          testID="amountCart_testID"
-        >
-          0
-        </Text>
-      </View>
-    </View>
-  </View>,
-  <View
-    style={
-      [
-        {
-          "alignItems": "center",
-          "backgroundColor": "#eff4f8",
-          "flexBasis": 0,
-          "flexGrow": 1,
-          "flexShrink": 1,
-          "justifyContent": "center",
-        },
-      ]
-    }
-  >
-    <ActivityIndicator
-      color="#01ea34"
-      size="large"
-    />
+      <View />
+    </RCTScrollView>
   </View>,
 ]
 `;

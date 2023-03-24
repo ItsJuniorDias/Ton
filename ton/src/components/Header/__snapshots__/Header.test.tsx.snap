@@ -8,13 +8,12 @@ exports[`Behavior Header render snapshot 1`] = `
         "alignItems": "center",
         "backgroundColor": "#ffffff",
         "flexDirection": "row",
-        "height": 126,
+        "height": 188,
         "justifyContent": "space-between",
-        "marginTop": "px",
         "paddingBottom": 0,
         "paddingLeft": 47,
         "paddingRight": 47,
-        "paddingTop": 0,
+        "paddingTop": "px",
         "width": "100%",
       },
     ]
@@ -43,7 +42,44 @@ exports[`Behavior Header render snapshot 1`] = `
   >
     Header
   </Text>
-  <View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "opacity": 1,
+        },
+      ]
+    }
+  >
     <Icon
       color="#01ad0b"
       name="shopping-cart"

@@ -38,7 +38,6 @@ jest.mock('axios', () => ({
     get: jest.fn().mockResolvedValue(RESPONSE),
   })),
 }));
-
 jest.mock('react-native-iphone-x-helper', () => ({
   isIphoneX: jest.fn(),
 }));

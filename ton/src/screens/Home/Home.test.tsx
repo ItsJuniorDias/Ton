@@ -2,8 +2,8 @@ import 'jest-styled-components';
 import React from 'react';
 import { render } from '@testing-library/react-native';
 import { ThemeProvider } from 'styled-components/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { Home } from './Home';
-
 import { theme } from '../../global';
 import { Provider } from 'react-redux';
 import store from '../../store';
@@ -42,12 +42,10 @@ const RESPONSE = {
 };
 
 jest.mock('react-native-vector-icons/MaterialIcons', () => 'Icon');
-
 jest.mock('react-native-iphone-x-helper', () => ({
   getStatusBarHeight: jest.fn(),
   isIphoneX: jest.fn(),
 }));
-
 jest.mock('axios', () => ({
   create: jest.fn(() => ({
     get: jest.fn().mockResolvedValue(RESPONSE),
@@ -58,7 +56,9 @@ describe('Behavior Home', () => {
   const screenRender = () => (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <Home />
+        <NavigationContainer>
+          <Home />
+        </NavigationContainer>
       </ThemeProvider>
     </Provider>
   );

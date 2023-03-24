@@ -1,12 +1,12 @@
 import 'jest-styled-components';
 import React from 'react';
 import { render } from '@testing-library/react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { ThemeProvider } from 'styled-components/native';
 import { Header } from './Header';
 import { theme } from '../../global';
 
 jest.mock('react-native-vector-icons/MaterialIcons', () => 'Icon');
-
 jest.mock('react-native-iphone-x-helper', () => ({
   getStatusBarHeight: jest.fn(),
   isIphoneX: jest.fn(),
@@ -15,7 +15,9 @@ jest.mock('react-native-iphone-x-helper', () => ({
 describe('Behavior Header', () => {
   const screenRender = () => (
     <ThemeProvider theme={theme}>
-      <Header amountCart={2} title="Header" />
+      <NavigationContainer>
+        <Header amountCart={2} title="Header" />
+      </NavigationContainer>
     </ThemeProvider>
   );
 

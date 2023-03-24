@@ -8,7 +8,6 @@ import store from '../../store';
 import { Provider } from 'react-redux';
 
 jest.mock('react-native-vector-icons/MaterialIcons', () => 'Icon');
-
 jest.mock('react-native-iphone-x-helper', () => ({
   getStatusBarHeight: jest.fn(),
   isIphoneX: jest.fn(),
