@@ -28,7 +28,6 @@ $ yarn
 **Run server**
 
 ```
-$ cd ton 
 $ yarn server
 ```
 
