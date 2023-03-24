@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FlatList, ActivityIndicator } from 'react-native';
-import { fetch } from '../../store/modules/cart';
+
 import { Header, ProductCard } from '../../components';
-import { useAppSelector, useAppDispatch, useFetchProducts } from '../../hooks';
+import { useAppSelector, useFetchProducts } from '../../hooks';
 import { theme } from '../../global';
 
 import { Content, LoadingContent } from './styles';
 
 export const Home = () => {
   const cart = useAppSelector((state) => state.cart);
-  const dispatch = useAppDispatch();
 
   const {
     dataProducts: { data, loading },
@@ -17,7 +16,7 @@ export const Home = () => {
 
   return (
     <>
-      <Header title="Home" amountCart={6} />
+      <Header title="Home" amountCart={cart.data.length} />
 
       {loading && (
         <LoadingContent>

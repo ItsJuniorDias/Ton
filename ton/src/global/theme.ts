@@ -7,6 +7,7 @@ export const theme = {
     title: '#000000',
     text: '#20252b',
     notification: '#ff7b00',
+    alert: '#ed5e69',
   },
   fonts: {
     regular: 'Roboto-Regular',

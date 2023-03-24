@@ -1,7 +1,12 @@
-import React, { useRef } from 'react';
-import { View, Text } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { View } from 'react-native';
 import { Button } from '../../components';
+import { useAppDispatch } from '../../hooks';
 import { formatCurrency } from '../../utils';
+import {
+  addProductToCart,
+  deleteProductFromCart,
+} from '../../store/modules/cart';
 
 import {
   Container,
@@ -20,9 +25,36 @@ type ProductCard = {
 };
 
 export const ProductCard = ({ id, title, thumbnail, price }: ProductCard) => {
+  const [isDelete, setIsDelete] = useState(false);
+
   const testIDs = useRef({
     container: 'containerCard_testID',
   }).current;
+
+  const dispatch = useAppDispatch();
+
+  const handleAddToCart = () => {
+    setIsDelete(true);
+
+    dispatch(
+      addProductToCart({
+        id,
+        title,
+        thumbnail,
+        price,
+      })
+    );
+  };
+
+  const handleDelete = () => {
+    setIsDelete(false);
+
+    dispatch(
+      deleteProductFromCart({
+        id,
+      })
+    );
+  };
 
   return (
     <Container testID={testIDs.container} key={id}>
@@ -39,7 +71,9 @@ export const ProductCard = ({ id, title, thumbnail, price }: ProductCard) => {
         </Installments>
       </View>
 
-      <Button title="Pedir agora" />
+      {isDelete && <Button isDelete onPress={handleDelete} title="Remover" />}
+
+      {!isDelete && <Button onPress={handleAddToCart} title="Pedir agora" />}
     </Container>
   );
 };

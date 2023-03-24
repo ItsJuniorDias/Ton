@@ -19,18 +19,30 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    fetch: (state, action: PayloadAction<ProductProps>) => {
-      console.log(
-        {
-          state,
-          action,
-        },
-        'STATE AND ACTION'
-      );
+    addProductToCart: (state, action: PayloadAction<ProductProps>) => {
+      const { payload } = action;
+
+      const findItem = state.data.find((item) => item.id === payload.id);
+
+      if (!!findItem) {
+        state;
+      } else {
+        state.data.push(payload);
+      }
+    },
+    deleteProductFromCart: (
+      state,
+      action: PayloadAction<Partial<ProductProps>>
+    ) => {
+      const { payload } = action;
+
+      const deleteItem = state.data.filter((item) => item.id !== payload.id);
+
+      state.data = deleteItem;
     },
   },
 });
 
-export const { fetch } = cartSlice.actions;
+export const { addProductToCart, deleteProductFromCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
