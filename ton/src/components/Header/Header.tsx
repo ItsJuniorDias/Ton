@@ -15,7 +15,7 @@ import {
 } from './styles';
 import { RootStackParamList } from '../../routes';
 
-type HeaderProps = {
+export type HeaderProps = {
   title: string;
   amountCart: number;
   isGoBack?: boolean;
@@ -24,6 +24,8 @@ type HeaderProps = {
 export const Header = ({ title, amountCart, isGoBack }: HeaderProps) => {
   const testIDs = useRef({
     amount: 'amountCart_testID',
+    pressable: 'pressableHeader_testID',
+    cart: 'pressableCart_testID',
   }).current;
 
   const navigation =
@@ -33,6 +35,7 @@ export const Header = ({ title, amountCart, isGoBack }: HeaderProps) => {
     <Container>
       {isGoBack ? (
         <Pressable
+          testID={testIDs.pressable}
           onPress={() => navigation.goBack()}
           style={({ pressed }) => [
             {
@@ -49,6 +52,7 @@ export const Header = ({ title, amountCart, isGoBack }: HeaderProps) => {
       <Title>{title}</Title>
 
       <Pressable
+        testID={testIDs.cart}
         onPress={() => navigation.navigate('Cart')}
         style={({ pressed }) => [
           {
