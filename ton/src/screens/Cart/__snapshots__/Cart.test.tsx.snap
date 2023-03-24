@@ -173,6 +173,7 @@ exports[`Behavior Cart render snapshot 1`] = `
     }
   >
     <RCTScrollView
+      ListHeaderComponent={[Function]}
       data={
         [
           {
@@ -206,6 +207,25 @@ exports[`Behavior Cart render snapshot 1`] = `
       viewabilityConfigCallbackPairs={[]}
     >
       <View>
+        <View
+          onLayout={[Function]}
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "fontFamily": "Roboto-Bold",
+                  "fontSize": 35,
+                  "marginTop": 47,
+                },
+              ]
+            }
+          >
+            2
+             produtos adicionados
+          </Text>
+        </View>
         <View
           onFocusCapture={[Function]}
           onLayout={[Function]}
