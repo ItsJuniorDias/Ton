@@ -15,9 +15,35 @@ jest.mock('react-native-iphone-x-helper', () => ({
   isIphoneX: jest.fn(),
 }));
 
+const stateCart = {
+  cart: {
+    data: [
+      {
+        id: 'T1',
+        title: 'T1 Brother',
+        thumbnail:
+          'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_auto/site-ton/t1-1',
+        price: 118.8,
+      },
+      {
+        id: 'T1_CHIP',
+        title: 'T1 Chip Brother',
+        thumbnail:
+          'https://res.cloudinary.com/dunz5zfpt/fl_progressive/f_auto,c_limit,w_256,q_auto/site-ton/t1-chip-1',
+        price: 190.8,
+      },
+    ],
+  },
+};
+
+const MOCK_CART_STORE = {
+  ...store,
+  getState: () => stateCart,
+};
+
 describe('Behavior Cart', () => {
   const screenRender = () => (
-    <Provider store={store}>
+    <Provider store={MOCK_CART_STORE}>
       <ThemeProvider theme={theme}>
         <NavigationContainer>
           <Cart />
