@@ -32,3 +32,9 @@ $ yarn android
 or 
 $ yarn ios  
 ```
+
+### Run Tests
+
+```
+$ yarn test 
+```
