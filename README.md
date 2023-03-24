@@ -43,8 +43,11 @@ $ yarn server
 IOS or Android
 
 ```
-$ cd ton 
-$ yarn ios  
+$ cd ton
+$ cd ios 
+$ pod install  
+$ cd ../
+$ yarn ios
 or 
 $ yarn android  
 ```
