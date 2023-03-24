@@ -24,11 +24,17 @@ $ yarn
 * Or emulate on your physical device.
 
 
-Android
+IOS or Android
 
 ```
 $ cd ton 
-$ yarn android 
-or 
 $ yarn ios  
+or 
+$ yarn android  
+```
+
+### Run Tests
+
+```
+$ yarn test 
 ```
