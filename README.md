@@ -12,11 +12,12 @@ https://user-images.githubusercontent.com/50254416/227601790-ca8a12dc-d1ea-459f-
 
 
 ### Tools
-- **Axios** were used for consumption by Api
-- **Styled-component** to work with customizable components
-- **Typescript** as a development language facilitating the definition of types
-- **React-Navigation** for navigation between screens
-- **React-Redux** for Global state control
+- **axios** were used for consumption by Api
+- **styled-component** to work with customizable components
+- **typescript** as a development language facilitating the definition of types
+- **react-Navigation** for navigation between screens
+- **react-Redux** and **@reduxjs/toolkit** for Global state control
+- **json-server** for simulate api service
 
 **Installing dependencies**
 
