@@ -23,13 +23,7 @@ export const cartSlice = createSlice({
     addProductToCart: (state, action: PayloadAction<ProductProps>) => {
       const { payload } = action;
 
-      const findItem = state.data.find((item) => item.id === payload.id);
-
-      if (!!findItem) {
-        state;
-      } else {
-        state.data.push(payload);
-      }
+      state.data.push(payload);
     },
     deleteProductFromCart: (
       state,
