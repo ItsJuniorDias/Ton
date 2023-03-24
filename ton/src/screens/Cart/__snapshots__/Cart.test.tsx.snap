@@ -57,6 +57,7 @@ exports[`Behavior Cart render snapshot 1`] = `
           },
         ]
       }
+      testID="pressableHeader_testID"
     >
       <Icon
         color="#20252b"
@@ -114,6 +115,7 @@ exports[`Behavior Cart render snapshot 1`] = `
           },
         ]
       }
+      testID="pressableCart_testID"
     >
       <Icon
         color="#01ad0b"
