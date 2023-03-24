@@ -6,9 +6,9 @@ Code challenger build using React Native
 ### Unit tests evidence
 <img width="641" alt="Captura de Tela 2023-03-24 às 14 31 16" src="https://user-images.githubusercontent.com/50254416/227598606-b6b4ea5a-26f5-4c67-af6c-33e7327f3593.png">
 
-### Evidence of what was developed ios
+### Evidence of what was developed IOS
 
-<img width="352" alt="Captura de Tela 2023-03-24 às 14 39 54" src="https://user-images.githubusercontent.com/50254416/227600688-985f1da6-27cd-4f4f-9db3-0ca6c562a473.png">
+https://user-images.githubusercontent.com/50254416/227601790-ca8a12dc-d1ea-459f-b95d-800b312b64e1.mov
 
 
 ### Tools
